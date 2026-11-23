@@ -1,18 +1,4 @@
 import java.util.*;
-
-class Process {
-    int id, arrivalTime, burstTime, remainingTime;
-    int waitingTime, turnaroundTime, completionTime, responseTime;
-    int firstStartTime = -1;
-
-    public Process(int id, int arrivalTime, int burstTime) {
-        this.id = id;
-        this.arrivalTime = arrivalTime;
-        this.burstTime = burstTime;
-        this.remainingTime = burstTime;
-    }
-}
-
 public class SRTF {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -58,7 +44,7 @@ public class SRTF {
 
             if (index != -1) {
                 // Context switch if preemption happened
-                if (prevIndex != -1 && prevIndex != index && processes[prevIndex].remainingTime > 0 && cs > 0) {
+                if (prevIndex != -1 && prevIndex != index  && cs > 0) {
                     for (int c = 0; c < cs; c++) {
                         System.out.println("Time " + currentTime + ": Context Switch (loading P" + processes[index].id + ")");
                         currentTime++;
