@@ -23,6 +23,12 @@ public class Process {
         this.effectivePriority = initialPriority;
     }
 
+
+    public Process copy()
+    {
+        return new Process(id, arrivalTime, burstTime, initialPriority);
+    }
+
     public void calculateMetrics(int finishTime) {
         this.completionTime = finishTime;
         this.turnaroundTime = this.completionTime - this.arrivalTime;
