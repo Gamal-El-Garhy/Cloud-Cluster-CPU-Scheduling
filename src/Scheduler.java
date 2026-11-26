@@ -1,5 +1,5 @@
 import java.util.List;
-//ابقي اعدل الكلاس ده يا تمير لما تيجي تعمل run لكلو في الاخر
+
 public interface Scheduler
 {
     /**

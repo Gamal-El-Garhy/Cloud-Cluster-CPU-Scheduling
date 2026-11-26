@@ -65,6 +65,10 @@ public class Main {
                     int arrival = sc.nextInt();
                     int burst = sc.nextInt();
                     int priority = sc.nextInt();
+                    if (arrival < 0 || burst <= 0 || priority < 1) {
+                        throw new IllegalArgumentException(
+                                "Invalid values (Arrival >= 0, Burst > 0, Priority >= 1).");
+                    }
                     processes.add(new Process(i, arrival, burst, priority));
                 }
             }

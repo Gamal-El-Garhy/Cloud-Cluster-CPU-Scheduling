@@ -15,6 +15,9 @@ public class Process {
 
     // constructor 2 for ACS
     public Process(int id, int arrivalTime, int burstTime, int initialPriority) {
+        if (burstTime <= 0) {
+            throw new IllegalArgumentException("Burst time must be > 0");
+        }
         this.id = id;
         this.arrivalTime = arrivalTime;
         this.burstTime = burstTime;

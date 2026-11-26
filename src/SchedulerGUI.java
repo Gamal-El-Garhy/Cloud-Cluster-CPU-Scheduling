@@ -222,7 +222,7 @@ public class SchedulerGUI extends JFrame {
 
             if (arrival < 0 || burst <= 0 || priority < 1) {
                 throw new IllegalArgumentException(
-                        "Invalid values in row " + (i + 1) + " (Arrival >= 0, Burst > 0, Priority >= 1).");
+                        "Invalid values in row " + (i + 1) + " (Arrival > 0, Burst > 0, Priority >= 1).");
             }
             list.add(new Process(id, arrival, burst, priority));
         }
